@@ -2,6 +2,15 @@ package yultamedia.test.day9;
 
 public class Human {
 
+	
+	int x = y;
+	static int y = 20;
+	
+	// Reason = y has not create yet.
+	// because static variable - class 
+	
+	
+	
 	// characteristics
 	// instance varibale  (object variable)
 	String name;
@@ -20,11 +29,17 @@ public class Human {
 	// run 
 
 	// speak
+	
+	// non static can access both - static variable and non static variables
 	void speak(String content) {
 		int k = 10;
-		System.out.println(name + ":" + content);
+		System.out.println(name + ":" + content + country);
 	}
 
+	// static method - we can't access any instance variable
+	static void walk() {
+		System.out.println(country + " is walking");
+	}
 
 	// Service
 	// taking some input - parameter
@@ -40,6 +55,10 @@ public class Human {
 
 class HumanDemo {
 	public static void main(String[] args) {
+		
+		System.out.println(Human.country);
+		Human.walk(); // we can call static method directly using classname. method name
+		
 		Human obj1 = new Human(); // create object
 		obj1.name = "Pravin";
 		obj1.height = 3.2d;
@@ -50,7 +69,7 @@ class HumanDemo {
 		
 		
 		obj1.country = "India";
-		System.out.println(obj2.country);
+		System.out.println(Human.country);
 		obj2.country = "Pakistan";
 		System.out.println(obj1.country);
 		
