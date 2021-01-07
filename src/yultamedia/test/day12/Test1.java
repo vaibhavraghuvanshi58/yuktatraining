@@ -20,8 +20,6 @@ public class Test1 {
 		marks2[8] = 10;
 		marks2[9] = 10;
 		
-		
-		
 		// array works on index concept.
 		// 7 - length of this array
 		// highest index - 6
